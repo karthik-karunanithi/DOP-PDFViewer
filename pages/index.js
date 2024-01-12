@@ -1,6 +1,7 @@
 import Head from "next/head";
 import PDFViewer from "./PDFViewer";
 import TestPage from "./testPage";
+import CustomizeSearchControlExample from "./CustomizeSearchControlExample";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 
@@ -23,7 +24,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>{sitePath == "pdfview" && <PDFViewer data={data} />}</main>
+      {/* <main>{sitePath == "pdfview" && <PDFViewer data={data} />}</main> */}
+      <main>{sitePath == "pdfview" && <CustomizeSearchControlExample data={data} />}</main>
       <main>{sitePath == "test" && <TestPage />}</main>
     </>
   );
